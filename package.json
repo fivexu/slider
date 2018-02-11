@@ -1,0 +1,23 @@
+{
+  "name": "slider-v",
+  "version": "1.1.0",
+  "description": "slider-v in vue.js",
+  "main": "index.js",
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+	"slider",
+	"slide"
+  ],
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/fivexu/slider.git"
+  },
+  "author": "fivexu",
+  "license": "ISC",
+  "bugs": {
+	"url": "https://github.com/fivexu/slider/issues"
+  },
+  "homepage": "https://github.com/fivexu/slider#readme"
+}
