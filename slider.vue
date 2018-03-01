@@ -294,123 +294,123 @@
   }
 </script>
 
-<style lang="less" scoped rel="stylesheet/less" type="text/less">
+<style scoped>
   .wrapper {
     cursor: pointer;
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    &:hover .switch {
-      opacity: 1
-    }
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transform-origin: center;
     overflow: hidden;
-    .slide-wrapper {
-      transition: all 0.5s;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transform-origin: center;
-      .slide {
-        width: 100%;
-        height: 100%;
-        float: left;
-        transition: opacity 0.5s;
-        margin: 0 auto;
-      }
-      .slide-3d {
-        width: 100%;
-        height: 100%;
-        float: left;
-        transition: all 0.5s ease;
-        margin: 0 auto;
-        opacity: 0;
-        transform: scale(0.3);
-        &.last {
-          opacity: 1;
-          transform: translate3d(-60%, 0, 0) scale(0.8);
-          z-index: 8 !important;
-          filter: grayscale(0.3) blur(1px);
-        }
-        &.current {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-          z-index: 10 !important;
-        }
-        &.next {
-          opacity: 1;
-          transform: translate3d(60%, 0, 0) scale(0.8);
-          z-index: 8 !important;
-          filter: grayscale(0.3) blur(1px);
-        }
-      }
-    }
-    .switch {
-      user-select: none;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
-      font-size: 40px;
-      opacity: 0;
-      display: block;
-      width: 40px;
-      height: 60px;
-      line-height: 65px;
-      text-align: center;
-      color: rgba(255, 255, 255, .5);
-      cursor: pointer;
-      transition: all 0.3s;
-      transform: scaleY(2);
-      &:hover {
-        color: #fff;
-      }
-      &:nth-of-type(1) {
-        left: 50px;
-      }
-      &:nth-of-type(2) {
-        right: 50px;
-      }
-    }
-    .dots {
-      text-align: center;
-      width: fit-content;
-      height: 10px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 20px;
-      margin: 0 auto;
-      z-index: 50;
-      .dot {
-        transition: all 0.3s;
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        margin: 0 5px;
-        border: 1px solid #00ae66;
-        border-radius: 5px;
-        cursor: pointer;
-        &.ac {
-          background-color: #00ae66;
-          border-color: #00ae66;
-          width: 30px;
-        }
-      }
-    }
+  }
+  .wrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper:hover .switch {
+    opacity: 1;
+  }
+  .wrapper .slide-wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+  }
+  .wrapper .slide-wrapper .slide {
+    width: 100%;
+    height: 100%;
+    float: left;
+    transition: opacity 0.5s;
+    margin: 0 auto;
+  }
+  .wrapper .slide-wrapper .slide-3d {
+    width: 100%;
+    height: 100%;
+    float: left;
+    transition: all 0.5s ease;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  .wrapper .slide-wrapper .slide-3d.last {
+    opacity: 1;
+    transform: translate3d(-60%, 0, 0) scale(0.8);
+    z-index: 8 !important;
+    filter: grayscale(0.3) blur(1px);
+  }
+  .wrapper .slide-wrapper .slide-3d.current {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    z-index: 10 !important;
+  }
+  .wrapper .slide-wrapper .slide-3d.next {
+    opacity: 1;
+    transform: translate3d(60%, 0, 0) scale(0.8);
+    z-index: 8 !important;
+    filter: grayscale(0.3) blur(1px);
+  }
+  .wrapper .switch {
+    user-select: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    font-size: 40px;
+    opacity: 0;
+    display: block;
+    width: 40px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scaleY(2);
+  }
+  .wrapper .switch:hover {
+    color: #fff;
+  }
+  .wrapper .switch:nth-of-type(1) {
+    left: 50px;
+  }
+  .wrapper .switch:nth-of-type(2) {
+    right: 50px;
+  }
+  .wrapper .dots {
+    text-align: center;
+    width: fit-content;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: 0 auto;
+    z-index: 50;
+  }
+  .wrapper .dots .dot {
+    transition: all 0.3s;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border: 1px solid #00ae66;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .wrapper .dots .dot.ac {
+    background-color: #00ae66;
+    border-color: #00ae66;
+    width: 30px;
   }
 </style>
